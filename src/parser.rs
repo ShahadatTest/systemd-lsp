@@ -775,10 +775,7 @@ mod tests {
         assert_eq!(exec_start.value_spans.len(), 2);
         assert_eq!(exec_start.value_spans[0].line, 1);
         assert_eq!(exec_start.value_spans[1].line, 3);
-        assert!(!exec_start
-            .value_spans
-            .iter()
-            .any(|span| span.line == 2));
+        assert!(!exec_start.value_spans.iter().any(|span| span.line == 2));
     }
 
     #[test]
@@ -795,10 +792,7 @@ mod tests {
 
         assert_eq!(exec_start.value, "/bin/echo a b");
         assert_eq!(exec_start.value_spans.len(), 2);
-        assert!(!exec_start
-            .value_spans
-            .iter()
-            .any(|span| span.line == 2));
+        assert!(!exec_start.value_spans.iter().any(|span| span.line == 2));
     }
 
     #[test]
